@@ -17,9 +17,12 @@ print("-" * szer)
 
 print("Which book would you like to add to your basket?")
 input_title = input("Please write the title ")
-print("How many copies of {0} would you like to add to your basket?" .format(input_title))
-input_quantity = int(input("Please write the quantity "))
-print("You’ve added {0} copy/copies of {1} to your basket!" .format(input_quantity, input_title))
+if input_title in basket_items:
+    print("How many copies of {0} would you like to add to your basket?" .format(input_title))
+    input_quantity = int(input("Please write the quantity "))
+    print("You’ve added {0} copy/copies of {1} to your basket!" .format(input_quantity, input_title))
+else:
+    print("Such book is not available")
 print("Would you like to add another book to your basket?")
 
 customer_input = input("yes or no?")
