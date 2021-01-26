@@ -17,7 +17,7 @@ if len(koszyk_items) > 3:
     suma = suma - (suma *5)/100
 
 if 'mleko' in koszyk_items and 'czekolada' in koszyk_items:
-    print('Hurrra! Znizka!')
+    print('Znizka!')
     suma = suma - (suma * 10)/100
 
 print("Wartosc koszyka {0} po znizka".format(suma))
