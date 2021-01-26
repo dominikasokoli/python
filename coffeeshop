@@ -38,4 +38,19 @@ for key in menu:
                 for x in range(0, len(price)):
                     sum = sum + price[x]
                 print("Total cost: ", sum)
-            break
+                break
+        promocode = str(input("Please input your promotion code: "))
+        promocode_list = ["1234", "DISCOUNT", "IloveCoffee"]
+        if promocode in promocode_list:
+            print("Discount was added")
+        else:
+            print("Your promotion code is not valid")
+            choice = input("Would you like to retype? y/n ")
+            if choice == 'y':
+                promocode_two = str(input("Please input your promotion code: "))
+                if promocode in promocode_list:
+                    print("Discount was added")
+                else:
+                    print("There's been an error")
+            if choice == 'n':
+                print("You will be redirected to checkout")
